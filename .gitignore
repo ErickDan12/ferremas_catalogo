@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Entorno virtual
+env/
+
+# Archivos de usuario de VSCode
+.vscode/
+
+# Archivos multimedia
+/media/
+
+# Archivos de migración (opcional, si los generas localmente)
+*.log
+*.pot
+*.pyc
+
+# Configuración de OS
+.DS_Store

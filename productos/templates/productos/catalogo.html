@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Productos</title>
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <h1>Catálogo de Productos</h1>
+  <div id="catalogo"></div>
+
+  <script>
+    fetch('/admin-productos/api/')
+      .then(response => response.json())
+      .then(productos => {
+        const contenedor = document.getElementById('catalogo');
+        productos.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <h3>${p.nombre}</h3>
+            <p>${p.descripcion}</p>
+            <strong>$${p.precio}</strong>
+          `;
+          contenedor.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
