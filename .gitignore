@@ -1,21 +1,21 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*.sqlite3
 
-# Entorno virtual
+# Virtual environment
 env/
 
-# Archivos de usuario de VSCode
-.vscode/
-
-# Archivos multimedia
-/media/
-
-# Archivos de migración (opcional, si los generas localmente)
+# Django stuff:
 *.log
 *.pot
 *.pyc
+*.pyo
 
-# Configuración de OS
+# macOS
 .DS_Store
+
+# VSCode settings
+.vscode/
+
+# Static/media (si decides ignorarlo)
+# media/
